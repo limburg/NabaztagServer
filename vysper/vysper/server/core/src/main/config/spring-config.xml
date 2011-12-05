@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+  <!--
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements. See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to you under the Apache License, Version
+    2.0 (the "License"); you may not use this file except in compliance
+    with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0 
+    
+    Unless required by applicable law or agreed to in writing, software 
+    distributed under the License is distributed on an "AS IS" BASIS, 
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+    See the License for the specific language governing permissions and 
+    limitations under the License.
+  -->
+
+
+<beans>
+
+    <bean id="inmemoryStorageRegistry" class="org.apache.vysper.storage.inmemory.MemoryStorageProviderRegistry" />
+
+    <bean id="jcrStorageRegistry" class="org.apache.vysper.storage.jcr.JcrStorageProviderRegistry" />
+
+    <!-- choose one of the storage registries -->
+    <alias name="inmemoryStorageRegistry" alias="storageRegistry" />
+
+    <!-- default users; remove if you have persistently stored users
+         NOTE: if passwords are empty, random passwords are generated and printed on the console
+               So, your default install of Vysper is secure from the very beginning
+    -->
+    <bean id="addUsers" class="org.apache.vysper.spring.AddUserHelper">
+        <constructor-arg index="0">
+            <map>
+                <entry key="admin@vysper.org" value="CHOOSE A SECURE PASSWORD" />
+                <!--<entry key="user1@vysper.org" value="CHOOSE A SECURE PASSWORD" />-->
+                <!--<entry key="user2@vysper.org" value="CHOOSE A SECURE PASSWORD" />-->
+                <!--<entry key="user3@vysper.org" value="CHOOSE A SECURE PASSWORD" />-->
+            </map>
+        </constructor-arg>
+        <property name="storageProviderRegistry" ref="storageRegistry" />
+    </bean>
+    
+    <bean id="tcpEndpoint" class="org.apache.vysper.mina.C2SEndpoint">
+    </bean>
+    
+    <!-- for making the server available over HTTP transport, configure the BOSH endpoint
+         BOSH requires extension xep0124-xep0206-bosh to be on the classpath.
+    -->
+    <!--
+    <bean id="boshEndpoint" class="org.apache.vysper.xmpp.extension.xep0124.BoshEndpoint">
+        <property name="accessControlAllowOrigin">
+            <list><value>*</value></list>
+        </property>
+        <property name="port" value="8080" />
+        <property name="contextPath" value="/bosh" />
+    </bean>
+    -->
+    
+    <bean id="server" class="org.apache.vysper.spring.SpringCompatibleXMPPServer"
+          init-method="init" destroy-method="destroy">
+        <!-- TODO change domain name to your domain -->
+        <constructor-arg value="vysper.org"/>
+        <property name="endpoints">
+            <list>
+                <ref bean="tcpEndpoint"/>
+                <!--<ref bean="boshEndpoint"/>-->
+            </list>
+        </property>
+        <property name="storageProviderRegistry" ref="storageRegistry" />
+        <property name="certificateFile" value="classpath:bogus_mina_tls.cert" />
+        <property name="certificatePassword" value="boguspw" />
+        <property name="modules" >
+            <list>
+                <bean class="org.apache.vysper.xmpp.modules.extension.xep0092_software_version.SoftwareVersionModule"/>
+                <bean class="org.apache.vysper.xmpp.modules.extension.xep0202_entity_time.EntityTimeModule" />
+                <bean class="org.apache.vysper.xmpp.modules.extension.xep0054_vcardtemp.VcardTempModule" />
+                <bean class="org.apache.vysper.xmpp.modules.extension.xep0199_xmppping.XmppPingModule" />
+                <bean class="org.apache.vysper.xmpp.modules.extension.xep0049_privatedata.PrivateDataModule" />
+                <bean class="org.apache.vysper.xmpp.modules.extension.xep0050_adhoc_commands.AdhocCommandsModule" />
+                <bean class="org.apache.vysper.xmpp.modules.extension.xep0133_service_administration.ServiceAdministrationModule" >
+                    <property name="addAdmins">
+                        <list><value>admin@vysper.org</value></list>
+                    </property>
+                </bean>
+                <!-- below some more modules which are available as separately-built jars. 
+                     make sure they are on the classpath when enabling them or remove the beans below, 
+                     depending on the features your server should expose -->
+                <!--<bean class="org.apache.vysper.xmpp.modules.extension.xep0060_pubsub.PublishSubscribeModule" />-->
+                <bean class="org.apache.vysper.xmpp.modules.extension.xep0045_muc.MUCModule" />
+            </list>
+        </property>
+    </bean>
+    
+</beans>

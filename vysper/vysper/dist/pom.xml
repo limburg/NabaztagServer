@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!--
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements. See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to you under the Apache License, Version
+    2.0 (the "License"); you may not use this file except in compliance
+    with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0 
+    
+    Unless required by applicable law or agreed to in writing, software 
+    distributed under the License is distributed on an "AS IS" BASIS, 
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+    See the License for the specific language governing permissions and 
+    limitations under the License.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>vysper-parent</artifactId>
+    <groupId>org.apache.vysper</groupId>
+    <version>0.8-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.apache.vysper</groupId>
+  <artifactId>vysper</artifactId>
+  <name>Apache Vysper</name>
+  <version>0.8-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.vysper</groupId>
+      <artifactId>nbxml</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.vysper</groupId>
+      <artifactId>vysper-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.vysper.extensions</groupId>
+      <artifactId>xep0045-muc</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.vysper.extensions</groupId>
+      <artifactId>xep0060-pubsub</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.vysper.extensions</groupId>
+      <artifactId>xep0124-xep0206-bosh</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.vysper.extensions</groupId>
+      <artifactId>vysper-websockets</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.mina</groupId>
+      <artifactId>mina-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.jcr</groupId>
+      <artifactId>jcr</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.jackrabbit</groupId>
+      <artifactId>jackrabbit-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+    </dependency>
+
+    <!-- Logging -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <optional>true</optional>
+    </dependency>
+    
+    <!-- Spec compliance -->
+    <dependency>
+      <groupId>org.apache.vysper</groupId>
+      <artifactId>spec-compliance</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>net.sf.ehcache</groupId>
+      <artifactId>ehcache-core</artifactId>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+
+
+  <build>
+    <!--<finalName>apache-${project.artifactId}-${project.version}</finalName>-->
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>appassembler-maven-plugin</artifactId>
+        <version>1.0</version>
+        <configuration>
+          <includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>
+          <configurationDirectory>config</configurationDirectory>
+          <target>${project.build.directory}/appassembler</target>
+          <repositoryLayout>flat</repositoryLayout>
+		  <repositoryName>lib</repositoryName>
+          <environmentSetupFileName>setenv</environmentSetupFileName>
+          <!-- Generate bin scripts for windows and unix per default -->
+          <platforms>
+            <platform>windows</platform>
+            <platform>unix</platform>
+          </platforms>
+          <programs>
+            <program>
+              <mainClass>org.apache.vysper.spring.ServerMain</mainClass>
+              <!-- call it only run because appassemble will add .bat by default on windows -->              
+              <name>run</name>
+              <!-- Only generate windows bat script for this application -->
+              <platforms>
+                <platform>windows</platform>
+              </platforms>
+            </program>
+            <program>
+              <mainClass>org.apache.vysper.spring.ServerMain</mainClass>
+              <name>run.sh</name>
+              <!-- Only generate unix shell script for this application -->
+              <platforms>
+                <platform>unix</platform>
+              </platforms>
+            </program>
+          </programs>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-appassemble</id>
+            <phase>package</phase>
+            <goals>
+              <goal>assemble</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.2</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <configuration>
+
+              <tasks>
+          		<!-- this is only needed because windows freak out on long cmd lines, so we strip of the absolute path
+          			 from the lib dir to make windows happy again -->
+                <replace file="${project.build.directory}/appassembler/bin/run.bat" token="%BASEDIR%\lib" value="..\lib" />
+                <replace file="${project.build.directory}/appassembler/bin/run.sh" token="setenv" value="setenv.sh" />
+              </tasks>
+
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+	  <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.2-beta-2</version>
+        <configuration>
+          <descriptorSourceDirectory>src/main/assembly</descriptorSourceDirectory>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>attached</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+	</plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>apache-release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>rat-maven-plugin</artifactId>
+            <version>1.0-alpha-3</version>
+            <executions>
+              <execution>
+                <id>verify-licenses</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>check</goal>
+                </goals>
+              </execution>
+            </executions>
+			<configuration>
+				<excludes>
+					<exclude>.dummy</exclude>
+				</excludes>
+			</configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project>

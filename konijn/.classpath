@@ -8,7 +8,7 @@
   <classpathentry kind="var" path="M2_REPO/javax/jms/jms/1.1/jms-1.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/transaction/jta/1.1/jta-1.1.jar" sourcepath="M2_REPO/javax/transaction/jta/1.1/jta-1.1-sources.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="var" path="M2_REPO/antlr/antlr/2.7.6/antlr-2.7.6.jar"/>
+  <classpathentry kind="var" path="M2_REPO/antlr/antlr/2.7.6/antlr-2.7.6.jar" sourcepath="M2_REPO/antlr/antlr/2.7.6/antlr-2.7.6-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar" sourcepath="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/asm/asm/3.1/asm-3.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar"/>
@@ -62,21 +62,21 @@
     </attributes>
   </classpathentry>
   <classpathentry kind="var" path="M2_REPO/org/mockito/mockito-core/1.8.2/mockito-core-1.8.2.jar"/>
-  <classpathentry kind="src" path="/nbxml"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/vysper/nbxml/0.8-SNAPSHOT/nbxml-0.8-SNAPSHOT.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/objenesis/objenesis/1.0/objenesis-1.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/quartz-scheduler/quartz/2.1.0/quartz-2.1.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.jar" sourcepath="M2_REPO/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.5.11/slf4j-api-1.5.11.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-log4j12/1.5.11/slf4j-log4j12-1.5.11.jar"/>
-  <classpathentry kind="src" path="/vysper-core"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/vysper/vysper-core/0.8-SNAPSHOT/vysper-core-0.8-SNAPSHOT.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket-auth-roles/1.5.0/wicket-auth-roles-1.5.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket-core/1.5.0/wicket-core-1.5.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket-extensions/1.5.0/wicket-extensions-1.5.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket-core/1.5.0/wicket-core-1.5.0.jar" sourcepath="M2_REPO/org/apache/wicket/wicket-core/1.5.0/wicket-core-1.5.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket-extensions/1.5.0/wicket-extensions-1.5.0.jar" sourcepath="M2_REPO/org/apache/wicket/wicket-extensions/1.5.0/wicket-extensions-1.5.0-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket-guice/1.5.0/wicket-guice-1.5.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket-ioc/1.5.0/wicket-ioc-1.5.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket-request/1.5.0/wicket-request-1.5.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket-ioc/1.5.0/wicket-ioc-1.5.0.jar" sourcepath="M2_REPO/org/apache/wicket/wicket-ioc/1.5.0/wicket-ioc-1.5.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket-request/1.5.0/wicket-request-1.5.0.jar" sourcepath="M2_REPO/org/apache/wicket/wicket-request/1.5.0/wicket-request-1.5.0-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/apache/wicket/wicket-util/1.5.0/wicket-util-1.5.0.jar" sourcepath="M2_REPO/org/apache/wicket/wicket-util/1.5.0/wicket-util-1.5.0-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/odlabs/wiquery/wiquery-core/1.5.0/wiquery-core-1.5.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/odlabs/wiquery/wiquery-jquery-ui/1.5.0/wiquery-jquery-ui-1.5.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar" sourcepath="M2_REPO/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2-sources.jar"/>
 </classpath>
