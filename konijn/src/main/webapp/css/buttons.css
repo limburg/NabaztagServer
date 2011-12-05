@@ -1,0 +1,62 @@
+/*Boutons */
+
+.buttons a, .buttons input {font-size:0.9em; padding:5px 5px 5px 22px; border:1px solid #ccc; float:right; margin:10px 0px 5px 5px; text-decoration:none; background-color:#EEE; color:#333; cursor:pointer; overflow:visible; font-family:"lucida grande",verdana,arial,sans-serif;}
+* html .buttons input {padding-top:4px; padding-bottom:4px;}
+* + html .buttons input {padding-top:4px; padding-bottom:4px;}
+.buttons a {padding-top:6px; padding-bottom:6px;}
+.buttons a:hover {text-decoration:none;}
+
+.buttons .positive {background: #EEE url(../images/icons/tick.png) 3px center no-repeat;}
+* html .buttons .positive {background-image: url(../images/icons/tick.gif);}
+.buttons a.positive-plus {padding-left:32px; background: #EEE url(../images/icons/double-tick.png) 3px center no-repeat;}
+* html .buttons a.positive-plus {background-image: url(../images/icons/double-tick.gif);}
+.buttons .neutral {background: #EEE url(../images/icons/bullet_green.png) 3px center no-repeat;}
+* html .buttons .neutral {background-image: url(../images/icons/bullet_green.gif);}
+.buttons .back {background: #EEE url(../images/icons/arrow_undo.png) 3px center no-repeat;}
+* html .buttons .back {background-image: url(../images/icons/arrow_undo.gif);} 
+.buttons .negative {background: #EEE url(../images/icons/cross.png) 3px center no-repeat;}
+* html .buttons .negative {background-image: url(../images/icons/cross.gif);}
+
+a.mainbutton { padding:0px 0 0px 10px; background: url(../images/layout/big-button-left.png) no-repeat left top;font-family:Arial, Helvetica, sans-serif; float:left; text-decoration:none; margin-right:10px; border:none; outline:none;}
+* html a.mainbutton {background-image: url(../images/layout/big-button-left.gif);}
+a.mainbutton span { padding:10px 15px 10px 5px; background: url(../images/layout/big-button-right.png) no-repeat right top; font-size:21px; display:block; color:#333;}
+* html a.mainbutton span {background-image: url(../images/layout/big-button-right.gif);}
+a.mainbutton:hover {text-decoration:none;}
+
+a.secbutton { padding:6px 0 0px 14px; background: url(../images/layout/bg_learn_more_left.png) no-repeat left 6px;font-family:Arial, Helvetica, sans-serif; float:left; text-decoration:none; margin-right:10px; border:none; outline:none;}
+* html a.secbutton {background-image: url(../images/layout/bg_learn_more_left.gif);}
+a.secbutton span { padding:4px 16px 10px 5px; background: url(../images/layout/bg_learn_more_right.png) no-repeat right top; font-size:18px; display:block; color:#666;}
+* html a.secbutton span {background-image: url(../images/layout/bg_learn_more_right.gif);}
+
+
+/*simple buttons*/
+.simplebutton {text-align:center;}
+.simplebutton input{font-size:1em; text-align:center;}
+
+/*Default but big buttons */
+.call2action {text-align:center; margin:15px 0;}
+
+/*div#content*/ .call2action input/*, .overlay .call2action input, #navigation .call2action input, #add-sound .call2action input*/ {background:#eaf401; color:#333333; float:none; font-size:1.2em; padding:10px 20px; cursor:pointer; overflow:visible;}
+* html /*div#content*/ .call2action input {behavior:url(stylesheets/csshover.htc); padding:8px 20px 7px 20px;}
+/** html .overlay .call2action input {behavior:url(stylesheets/csshover.htc); padding:8px 20px 7px 20px;}*/
+* + html /*div#content*/ .call2action input {padding:8px 20px 7px 20px;}
+/** + html .overlay .call2action input {padding:8px 20px 7px 20px;}*/
+/*div#content*/ .call2action input.delete, /*div#content*/ .call2action a.delete/*, .overlay .call2action input.delete, #navigation .call2action input.delete*/ {background:red; color:#fff;}
+/*div#content .delete-thing*/ .call2action a.delete {display:inline;}
+/*div#content .delete-thing*/ .call2action a.delete:hover { background-color:#CC0001;}
+
+/*disabled buttons*/
+/*div#content*/ .call2action.disabled input/*, .overlay .call2action.disabled input, #navigation .call2action.disabled input*/ {background:#CCC; cursor:default; color:#FFF; }
+/*div#content*/ .call2action.disabled input:hover/*, .overlay .call2action.disabled input:hover, #navigation .call2action.disabled input:hover*/ {background:#CCC; cursor:default; color:#FFF; }
+
+/*div#content*/ .call2action input:hover/*, .overlay .call2action input:hover, #navigation .call2action input:hover, #add-sound .call2action input:hover*/ {background-color:#ccdc00; color:#FFF;}
+/*div#content*/ .call2action input.delete:hover/*, .overlay .call2action input.delete:hover, #navigation .call2action input.delete:hover*/ {background:#C41301; color:#fff;}
+/*div#content*/ .call2action a/*, .overlay .call2action a, div#navigation .call2action a*/ {background:#eaf401; color:#333333; font-size:1.2em; padding:10px 20px; text-decoration:none; border-style:solid; border-width:1px 2px 2px 1px; border-color:#ccc #999 #999 #ccc; display:block; width:65%; margin:0 auto;} /*Je décommente les trois derniers styles */
+/*div#content*/ .call2action a:hover/*, .overlay .call2action a:hover, div#navigation .call2action a:hover*/ {background-color:#ccdc00; color:#FFF; text-decoration:none;}
+/*div#content*/ .call2action .back {width:auto; display:inline; background:none; border:none; padding:0; margin:0 5px; font-size:1.0em; color:#999;}
+/*div#content*/ .call2action .back:hover {color:#333; background:none; text-decoration:underline;}
+
+#navigation .call2action {text-align:center; margin:10px 0 0;}
+#navigation .call2action input {font-size:1em; padding:10px; width:100%;}
+* html #navigation .call2action input {behavior:url(stylesheets/csshover.htc);}
+div#navigation .call2action a {width:auto; font-size:1em;}

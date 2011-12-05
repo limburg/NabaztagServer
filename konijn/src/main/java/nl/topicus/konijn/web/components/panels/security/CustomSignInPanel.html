@@ -1,0 +1,28 @@
+<html xmlns:wicket>
+<body>
+  <wicket:panel>
+    <span wicket:id="feedback"/>
+		<form wicket:id="signInForm">
+			<div class="field">
+				<label>
+					<span>Your e-mail</span>
+					<input wicket:id="username" alt="{event:'blur'}" class="required email text-field" id="login" title="Please enter your login" type="text" value="" />
+				</label>
+      		</div>
+      		<div class="field">
+				<label>
+					<span>Password</span>
+					<input wicket:id="password" alt="{event:'blur'}" class="required text-field" id="passwd" title="Please enter a password" type="password" value="" />
+				</label>
+        	</div>
+			<div wicket:id="rememberMeRow">
+				<input wicket:id="rememberMe" type="checkbox" /> Remember Me
+			</div>
+
+			<div class="call2action">
+				<input type="submit" name="submit" value="Sign In"/>
+			</div>
+		</form>
+  </wicket:panel>
+</body>
+</html>

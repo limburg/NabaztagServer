@@ -1,0 +1,163 @@
+/* FORM CONTENT */
+input, select, textarea{font-family:Arial, Helvetica, verdana, sans-serif;}
+input {font-size:1.2em;}
+select {font-size:1em;}
+div#content .field {margin-bottom:10px; clear:both; line-height:1.6em;}
+div#content .field label {cursor:pointer;}
+div#content .field label span {display:block; float:left; width:370px; margin-right:15px; text-align:right;}
+div#content .field .message {display:none;}
+
+div#content .main .form-content .field.error { border:1px solid red; background: #FFCACB; padding-top:5px;}
+div#content .main .form-content .field.error .message { display:block; background:none; margin:0 0 0 310px; font-weight:bold; width:275px;}
+
+/* Pour page registration*/
+div#content .field.error {border:2px solid #CCC; background:#999; padding-top:5px; color:#D40072;}
+div#content .field.error label {color:#fff;}
+div#content .field.error .message {display:block; font-weight:bold; font-size:0.9em; padding-left:5px;}
+
+div#content .field a {color:#666;}
+div#content .search-box .field {padding:5px 0 0 0; margin:0;}
+div#content .search-box .field input, div#content .search-box .field select {font-size:1em;}
+div#content .tab-content .form-content .field label {width:250px; display:block; float:left; text-align:right; margin-right:10px; color:#666; font-weight:bold;}
+div#content .tab-content .form-content .field.narrow label {width:190px; text-align:left; margin-left:60px;}
+div#content .tab-content .form-content .field.narrow select {width:227px;}
+div#content .tab-content .form-content .field.narrow .birth {width:73px;}
+* html div#content .tab-content .form-content .field.narrow label {width:190px; text-align:left; margin-left:30px;}
+div#content .tab-content .form-content .field.narrow a.delete {display:block;width:16px; height:16px; float:right; margin-top:4px; background: url(../images/images/icons/window-close.gif) no-repeat center center;}
+div#content .tab-content .form-content .field-media {margin-bottom:10px;}
+div#content .tab-content .form-content .field-media .stitle {font-size:0.9em; margin:0 10px 0 60px; text-align:left; color:#666666; font-weight:bold; width:190px; float:left;}
+div#content .tab-content .form-content .field-media .select-file {position:relative;}
+div#content .tab-content .form-content .field-media .slider-media {font-size:0.9em; color:#666;}
+div#content .tab-content .form-content .field-media a.slider-media {font-size:0.9em; color:#666;}
+div#content .tab-content .form-content .field-media a.delete {display:block;width:16px; height:16px; float:right; margin-top:4px; background: url(../images/images/icons/window-close.gif) no-repeat center center;}
+* html div#content .tab-content .form-content .field-media .media-picker .action-title {zoom:1;}
+
+div#content .tab-content .form-content .field.narrow label.error {margin:5px 0 5px 260px; border:1px solid red; background: #FFCACB; color:black; clear:both; width:270px; float:none; padding:0 0 0 5px;}
+div#content .tab-content .form-content .password, div#content .tab-content .form-content .password label {color:#bbb;}
+
+div#content .form-content .counter{ color:#000; clear:both; display:block; margin-left:310px; font-size:0.8em; line-height:10px;}
+
+div#content .form-content p {margin:0px 30px 10px; clear:both; font-size:0.85em;}
+div#content .form-content ul.list {margin:0px 60px 10px; list-style:disc outside; font-size:0.85em; line-height:1.5em;}
+div#content .form-content .settings-switcher {width:100%; font-size:0.875em; margin:5px 0 5px 0; padding:0;}
+div#content .form-content .settings-switcher a {color:#666; cursor:pointer;}
+div#content .form-content #password-change { border:2px solid #999; padding-top:5px;}
+
+/*Champs de saisie texte */
+input.text-field, select.drop-down, textarea {border:solid #CCC; border-width:1px 2px 2px 1px; padding:3px 0 3px 5px;}
+input.example {font-size:1em; color:#999;}
+.search-form input.text-field {width:168px;}
+.text-field.highlight {border:solid #666; border-width:1px 2px 2px 1px; background-color: #f8f8f8;}
+div#content .form-content input.regular, div#content .form-content textarea.regular {width:220px;}
+div#content .form-content input.email {width:200px; background: #FFF url(../images/images/icons/sprites.gif) no-repeat 3px -724px;; padding-left:25px;}
+div#content .form-content input.email.highlight {background-color:#f8f8f8;}
+div#content .form-content input.email.active {background:#f8f8f8 url(../images/images/icons/email.gif) no-repeat 5px center;}
+div#content .form-content input.mandatory {border:solid #b5bf00; border-width:1px 2px 2px 1px; padding-left:5px;}
+
+/* Lien de modification pour page préférences user */
+div#content .form-content a.modif {display:block; float:right; font-size:0.8em; line-height:2.8em; color:#999;}
+div#content .form-content a.modif:hover {color:#333; text-decoration:none;}
+/* Description de l'état actuel de la configuration */
+div#content .form-content .current-state {font-size:0.9em; margin-bottom:10px; color:#666;}
+div#content .form-content .current-state a {color:#999;}
+div#content .form-content .current-state a:hover {color:#666; text-decoration:none;}
+
+/* Saisie heures */
+input.hour {width:20px; margin:0 3px; font-size:0.875em;}
+div#content .tab-content .form-content .define-time {font-size:0.85em; margin:10px 0;}
+div#content .tab-content .form-content .define-time a {color:#999;}
+div#content .tab-content .form-content .define-time a:hover, div#content .tab-content .form-content .define-time .highlight, div#content .tab-content .form-content .time-choice .delete-time:hover {color:#333; border:none; background:none;}
+div#content .tab-content .form-content .time-setting {background: url(../images/images/layout/bg_scheduling.gif) repeat-x left bottom; margin:5px 0; padding:5px 0; border-bottom:1px solid #e0e0e0;}
+div#content .tab-content .form-content .time-choice {margin-left:150px; line-height:1.6em; margin-left:10px;}
+div#content .tab-content .form-content .time-choice label {width:150px; display:block; float:left; text-align:left; margin-right:10px; font-weight:normal;}
+div#content .tab-content .form-content .time-choice .different-day {float:left; width:160px; font-weight:bold; color:#666;}
+div#content .tab-content .form-content .time-choice .field {clear:none; margin-left:160px; font-size:1em; margin-bottom:5px;}
+div#content .tab-content .form-content .delete-time {float:right; margin-right:10px; color:#999; line-height:3.7em;}
+div#content .tab-content .form-content .delete-time.all {line-height:normal;}
+
+/* Saisie nombres */
+input.number {width:30px;}
+
+/* Multi check boxes */
+div#content .tab-content .form-content .checkbox-group {clear:both;}
+div#content .tab-content .form-content .checkbox-group .check-buttons {float:left; width:470px;}
+div#content .tab-content .form-content .checkbox-group .check-buttons label {display:block; margin:0; font-weight:normal; text-align:left; width:170px; float:left;}
+div#content .tab-content .form-content .checkbox-choice input {margin-top:4px; margin-right:10px;}
+div#content .tab-content .form-content .checkbox-choice label {display:block; width:96%; text-align:left; color:#000; font-weight:normal; float:none;}
+/*div#content .tab-content .form-content .radio-group.inline .radio-buttons label {width:125px; display:block; float:left; text-align:left; margin-right:10px; color:#000; font-weight:normal;}*/
+
+/*Aide � la saisie */
+div#content .form-content .hint, div#content .search-form .hint, .ztamp-description .hint {border-left: 5px solid #EEE; font-size: 0.75em; color:#666; padding-left:5px; margin:5px 0 5px 0; width:98%;}
+div#content .form-content .hint a {text-decoration:underline;}
+div#content .form-content .hint.onfield {margin-left:312px; width:268px;}
+div#content .form-content .hint.onfield {margin-left:312px; width:268px;}
+div#content .form-content .field.narrow .hint.onfield {margin-left:260px; width:268px;}
+* html div#content .form-content .hint.onfield {width:264px;}
+div#content .tab-content .form-content .hint.onfield {margin-left: 260px; width:268px;}
+div#content .form-content .hint.onlabel {width:450px; margin:0 auto; clear:both;}
+
+/*Boutons radios */
+div#content .form-content .radio-group {clear:both;}
+/*div#content .form-content .radio-group.field.narrow .radio-buttons label {margin-left:0px;}
+div#content .form-content .radio-group.field.narrow .radio-buttons {margin-left:260px;}
+div#content .form-content .radio-group.inline .radio-buttons {margin-left:310px;}
+div#content .form-content .radio-group.inline .radio-buttons label {width:125px; display:block; float:left; text-align:left; margin-right:10px; color:#000; font-weight:normal;}*/
+div#content .form-content .radio-group.list .radio-buttons label {width:570px; text-align:left; margin-right:10px; color:#000; font-weight:normal; float:none;}
+div#content .form-content .radio-group.list .radio-buttons.hint {font-size:0.9em; margin-left:232px; width:auto;}
+div#content .form-content .radio-group.list .radio-buttons.hint label {width:339px;}
+div#content .tab-content .form-content .radio-group.inline.field.narrow .radio-buttons {margin-left:260px;}
+div#content .tab-content .form-content .radio-group.inline.field.narrow .radio-buttons label {width:130px; display:block; float:left; text-align:left; margin:0 10px 0 0; color:#000; font-weight:normal;}
+
+/* Champ de texte Textarea */
+div#content .form-content textarea {height:100px; font-size:1.2em;}
+div#content .form-content textarea.large {width:400px; margin:0 auto 0 auto; display:block;}
+
+/*Listes d�roulantes */
+/*div#content .form-content .drop-down {width:227px;}*/
+/*div#content .form-content .birth,*/ .age_search {width:73px;}
+
+/* Selection des langues parl�es */
+div#content .form-content ul.spoken-langage {margin:15px auto 10px; font-size:0.85em; width:550px;}
+div#content .form-content ul.spoken-langage li {float:left; width:33%; margin-bottom:10px; display:block; height:25px;}
+div#content .form-content ul.spoken-langage li.clear {float:none; width:auto; margin:0; display:inline; height:auto;}
+div#content .form-content ul.spoken-langage li label {width:auto; cursor:pointer;}
+div#content .form-content ul.spoken-langage li label input {margin-right:5px;}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* FORM CREATE NABCAST */
+div#content .form-content .setting-choice {margin-left:310px;}
+div#content .form-content .setting-choice label {width:auto; color:#000; font-weight:normal; margin-right:5px; float:none; display:inline;}
+div#content .form-content .field .field-left {float:left; width:310px;}
+div#content .form-content .field .field-left label {float:none;}
+div#content .form-content .field .field-left .hint {border-right:5px solid #eee; border-left:none; text-align:right; width:auto; margin:0 10px 0 0; padding:0 5px 0 0;}
+
+/* PAGE D'APPLICATION */
+select.dayselect {width:125px;}
+
+/* ZTAMP NATHAN */
+div#content .ztamp-description .field {margin-top:10px;}
+div#content .ztamp-description .field label {width:350px; display:block; float:left; text-align:right; margin-right:10px; color:#666; /*font-weight:bold;*/}
+div#content .ztamp-description .field select {width:227px;}
+div#content .ztamp-description .field textarea {width:300px; height:150px; font-size:0.88em;}
+div#content .ztamp-description .radio-buttons {margin-left:360px; font-size:0.9em;}
+div#content .ztamp-description .radio-buttons label {width:190px; display:block; float:left; text-align:left; margin-right:10px; color:#000; font-weight:normal;}
+div#content .ztamp-description .hint {margin:-5px 0 0 360px; width:350px;}
+
+div#content .ztamp-search .field {margin-top:30px; padding-bottom:5px; border-bottom:1px solid #ddd;}
+div#content .ztamp-search .field label {width:150px; display:block; float:left; text-align:right; margin-right:10px; color:#666; font-weight:bold;}
+div#content .ztamp-search .field .criteria {margin-left:160px;}
+div#content .ztamp-search .field .criteria label {width:33%; margin:0 0 5px 0; text-align:left; font-weight:normal; font-size:0.9em;} 
+div#content .ztamp-search .field .criteria label input {margin-right:5px;}
+
+/* Page revendeur */
+div#content .form-content .group-checkbox, div#content .form-content .group-radio {float:right;}
+div#content .form-content .group-checkbox label, div#content .form-content .group-radio label {float:none; font-weight:normal; text-align:left; width:280px; margin:0;}
+div#content .form-content .group-checkbox label input, div#content .form-content .group-radio label input {margin-right:10px;}
+
+div#content .form-content .msg-error {border:1px solid red; background: #FFCACB; padding:5px; margin:10px 0 10px 310px; clear:both; display:none; font-weight:bold;}
+div#content .form-content input.button {background:#EEE url(../images/images/icons/tick.png) no-repeat 5px 5px; border:1px solid #CCC; color:#333; margin-left:310px; padding:5px 5px 5px 22px;}
+* html div#content .form-content input.button {background-image:url(../images/images/icons/tick.gif); padding-left:15px;}
+
+optgroup {color:#999; font-weight:bold; text-transform:uppercase;}
+option {padding-left:10px;}

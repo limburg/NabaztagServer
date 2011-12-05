@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<display-name>WicketWarp</display-name>
+
+	<!-- Warp Filter -->
+	<filter>
+		<filter-name>guiceFilter</filter-name>
+		<filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+	</filter>
+
+	<!-- Bunny Servlet -->
+   	<servlet>
+    	<servlet-name>mc</servlet-name>
+    	<servlet-class>nl.topicus.konijn.web.entrypoints.MailEntryPoint</servlet-class>
+    </servlet>    
+    <servlet-mapping>
+		<servlet-name>mc</servlet-name>
+		<url-pattern>/vl/sendMailXMPP.jsp</url-pattern>
+	</servlet-mapping>
+
+  	<servlet>
+    	<servlet-name>bc</servlet-name>
+    	<servlet-class>nl.topicus.konijn.web.entrypoints.BcEntryPoint</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>bc</servlet-name>
+		<url-pattern>/bc.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+    	<servlet-name>locate</servlet-name>
+    	<servlet-class>nl.topicus.konijn.web.entrypoints.LocateEntryPoint</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>locate</servlet-name>
+		<url-pattern>/locate.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<filter-mapping>
+		<filter-name>guiceFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- Warp Filter -->
+	<filter>
+		<filter-name>konijn</filter-name>
+		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>nl.topicus.konijn.WicketApplication</param-value>
+		</init-param>
+		<init-param>	
+			<param-name>configuration</param-name>
+            <param-value>development</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>konijn</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+</web-app>
