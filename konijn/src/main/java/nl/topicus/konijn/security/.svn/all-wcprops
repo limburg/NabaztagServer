@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/160004/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/security
+END
+UserRolesAuthorizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/159699/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/security/UserRolesAuthorizer.java
+END
+AuthenticatedSession.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/160004/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/security/AuthenticatedSession.java
+END

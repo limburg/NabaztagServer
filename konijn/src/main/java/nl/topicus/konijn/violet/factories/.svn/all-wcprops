@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/160786/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/violet/factories
+END
+MessagePacketFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/!svn/ver/160786/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/violet/factories/MessagePacketFactory.java
+END
+AmbientPacketFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/!svn/ver/160786/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/violet/factories/AmbientPacketFactory.java
+END
+AbstractVioletFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/!svn/ver/160786/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/violet/factories/AbstractVioletFactory.java
+END

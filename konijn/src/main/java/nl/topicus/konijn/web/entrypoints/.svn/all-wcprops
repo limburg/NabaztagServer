@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/160786/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/web/entrypoints
+END
+LocateEntryPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/!svn/ver/172621/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/web/entrypoints/LocateEntryPoint.java
+END
+BcEntryPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/160786/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/web/entrypoints/BcEntryPoint.java
+END
+bc-nominal-h4.bin
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/160786/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/web/entrypoints/bc-nominal-h4.bin
+END
+MailEntryPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/!svn/ver/160004/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/web/entrypoints/MailEntryPoint.java
+END

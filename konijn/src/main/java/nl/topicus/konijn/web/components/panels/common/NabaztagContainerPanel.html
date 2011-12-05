@@ -1,0 +1,73 @@
+<html xmlns:wicket>
+<body>
+  <wicket:panel>
+	<div wicket:id="dialogContainer" style="display: none;">
+  		<div wicket:id="sleepDialog" style="display: none;"><div wicket:id="child">		</div></div>
+  		<div wicket:id="randomDialog" style="display: none;"><div wicket:id="child">	</div></div>
+  		<div wicket:id="weatherDialog" style="display: none;"><div wicket:id="child">	</div></div>
+  		<div wicket:id="clockDialog" style="display: none;"><div wicket:id="child">		</div></div>
+  	</div>
+  <div id="nabaztagInfo" style="float: left; width: 220px; height: 460px; border-right: 1px dashed #666666;" >
+  	<div id="photoContainer" style="border: 3px solid #666666; background: #DEDEDE; border-radius: 3px; width: 162px; height: 162px;">
+		<div id="middleCenter" style="background-image: url('../images/nabphoto.jpg'); position: relative; left: 1px; top: 1px; width: 160px; height: 160px;">&nbsp;</div>
+		<div id="macInfo" style="text-align: center; text-shadow: #000000 0px 0px 3px; top: -20px; position: relative; color: white;"><span wicket:id="mac">00134903</span></div>		
+  	</div>
+  	<div wicket:id="statusContainer" style="text-align: center; text-shadow: #000000 0px 0px 1px;"><span wicket:id="status" style="color: #000000">loading...</span></div>
+  	<br style="clear:both;" />
+  	<br style="clear:both;" />
+  	<div style="left: -10px; position: relative;">
+		<div style="float: left; width: 100px;text-align: center;"><img src="../images/layout/2/bt_messagesOFF.png" /></div>
+		<div style="float: left; width: 100px;text-align: center;"><img src="../images/layout/2/bt_terrierOFF.png" /></div>
+	</div>	
+	<div>
+		<div style="float: left; width: 100px; text-align: center;"><img src="../images/layout/2/bt_nablifeOFF.png" /></div>
+		<div style="float: left ; width: 100px;text-align: center;"><img src="../images/layout/2/bt_aideOFF.png" /></div>
+	</div>	
+  </div>
+  <div id="eventInfo" style="float: right; height: 100%;">
+	<div wicket:id="accordion" style="width: 500px">
+		<h3>
+			<a href="#"><div style="background: url(../images/visuels_services/clock.gif) 0px -20px; background-size: 30px;background-position: right;background-repeat:no-repeat;">
+				Clock</div>
+			</a></h3>
+		<div>
+			<p>Let your faithfull nabaztag inform you of the current time, every hour!</p>
+			<br/>
+			<a href="#"><div wicket:id="configureClock" style="margin-left: auto; margin-right: auto; width: 175px; height: 30px; padding-top: 5px; text-align:center ;background: url(../images/abo/bouton.gif)">Configure</div></a>
+		</div>
+		<h3>
+			<a href="#"><div style="background: url(../images/visuels_services/webradio.gif) 0px -20px;background-size: 40px; background-position: right;background-repeat:no-repeat;">
+			Radio</div>
+			</a></h3>
+			<div wicket:id="radioContainerPanel">
+		</div>
+		<h3>
+			<a href="#"><div style="background: url(../images/bed.png) 0px -20px;background-size: 28px; background-position: right;background-repeat:no-repeat;">
+			Sleep</div>
+			</a></h3>
+		<div>
+			<p>Your nabaztag needs sleep as well, tell it when it's allowed to get some shuteye!</p>
+			<br/>
+			<a href="#"><div wicket:id="configureSleep" style="margin-left: auto; margin-right: auto; width: 175px; height: 30px; padding-top: 5px; text-align:center ;background: url(../images/abo/bouton.gif)">Configure</div></a>
+		</div>
+		<h3><a href="#"><div style="background: url(../images/speech.png) 0px -20px;background-size: 8%; background-position: right;background-repeat:no-repeat;">
+			Speech</div>
+			</a></h3>
+		<div>
+			<p>Your nabaztag is very witty, and he likes to share. Every now and then he feels like talking to you</p>
+			<br/>
+			<a href="#"><div wicket:id="configureRandomSpeech" style="margin-left: auto; margin-right: auto; width: 175px; height: 30px; padding-top: 5px; text-align:center ;background: url(../images/abo/bouton.gif)">Configure</div></a>
+		</div>
+		<h3><a href="#"><div style="background: url(../images/visuels_services/meteo.gif) 0px -20px;background-size: 8%;background-position: right;background-repeat:no-repeat;">
+			Weather</div>
+			</a></h3>
+		<div>
+			<p>Let the nabaztag inform you of the weather nearby your location.</p>
+			<br/>
+			<a href="#"><div wicket:id="configureWeather" style="margin-left: auto; margin-right: auto; width: 175px; height: 30px; padding-top: 5px; text-align:center ;background: url(../images/abo/bouton.gif)">Configure</div></a>
+		</div>
+	</div>
+  </div>
+  </wicket:panel>
+</body>
+</html>

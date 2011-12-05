@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/163530/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/data/dao/interfaces
+END
+IUserDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/161189/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/data/dao/interfaces/IUserDao.java
+END
+IBaseDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/160004/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/data/dao/interfaces/IBaseDao.java
+END
+INabaztagDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/!svn/ver/160206/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/data/dao/interfaces/INabaztagDao.java
+END
+IEventSettingDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/!svn/ver/163530/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/data/dao/interfaces/IEventSettingDao.java
+END
+IEventDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/163530/onderwijs/users/limburg/nabaztagserver/konijn/src/main/java/nl/topicus/konijn/data/dao/interfaces/IEventDao.java
+END

@@ -1,0 +1,7 @@
+<html xmlns:wicket>
+<body>
+  <wicket:panel>
+	Sleep!
+  </wicket:panel>
+</body>
+</html>
