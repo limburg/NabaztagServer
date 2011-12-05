@@ -1,7 +1,0 @@
-<html xmlns:wicket>
-<body>
-  <wicket:panel>
-	Clock!
-  </wicket:panel>
-</body>
-</html>
