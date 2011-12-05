@@ -1,0 +1,8 @@
+target
+.svn
+*.log
+*.log.?
+.settings
+.project
+.classpath
+hibernate.properties
