@@ -21,12 +21,14 @@ persistent.
 # Tips #
 The nabaztags connect to port 80, if you run the Start class it will setup the server on port 8080.
 In order to get the nabaztag to connect, you have to do the following:
+
 	- linux: Forward port 80 to 8080 (port 80 is a reserved port, hard to get eclipse/jetty to work on that);
 	- windows: change the default value of 8080 in the Start class to 80.
 
 
 # Features #
 The current features are in:
+
 	- Setup accounts, which can contain multiple nabaztags;
 	- Logging your nabaztag onto the server;
 	- Streaming radio from the internet;
@@ -34,6 +36,7 @@ The current features are in:
 
 # Todo #
 Lots and lots, for starters:
+
 	- Voice recognizion
 	- Weather/rfid etc.
 
